@@ -4,7 +4,6 @@
 //= require_tree .
 
 // global variables
-let currentDate
 let startTime
 let circle
 
@@ -15,8 +14,10 @@ document.addEventListener('turbolinks:load', () => {
     
     circle.addEventListener('click', () => {
         // count the time from when the div turns red until user clicks on screen
-    
-        // if user clicks before screen turns red, nothing will happen
+        let currentDate = new Date()
+        let currentTime = currentDate.getTime()
+        let endTime = currentTime - startTime
+        console.log(endTime)
     
         // create a variable to hold the paragraph to show the score
         
@@ -25,15 +26,13 @@ document.addEventListener('turbolinks:load', () => {
 })
 
 const startGame = () => {
-    console.log('start game function is called')
-
     // generate random time until game page goes red
     let secondsUntilRed = Math.floor((Math.random() * 7 + 2) * 1000)
 
     // change game page background color to red when time is up
     setTimeout(() => {
         circle.style.backgroundColor = 'red'
-        currentDate = new Date()
+        let currentDate = new Date()
         startTime = currentDate.getTime()
     }, secondsUntilRed);
 }
