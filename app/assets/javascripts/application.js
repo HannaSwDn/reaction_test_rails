@@ -17,11 +17,12 @@ document.addEventListener('turbolinks:load', () => {
         let currentDate = new Date()
         let currentTime = currentDate.getTime()
         let endTime = currentTime - startTime
-        console.log(endTime)
     
         // create a variable to hold the paragraph to show the score
+        let displayReactionTime = document.getElementById('paragraph')
         
         // display the time in the paragraph on the game page
+        displayReactionTime.innerHTML = `Your reaction time was: 0.${endTime} seconds`
     })
 })
 
