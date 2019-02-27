@@ -22,7 +22,7 @@ document.addEventListener('turbolinks:load', () => {
         let displayReactionTime = document.getElementById('paragraph')
         
         // display the time in the paragraph on the game page
-        displayReactionTime.innerHTML = `Your reaction time was: 0.${endTime} seconds`
+        displayReactionTime.innerHTML = `Your reaction time was: ${endTime / 1000} seconds`
     })
 })
 
