@@ -1,0 +1,19 @@
+/ div for the reaction test
+#test
+  %button{:onclick => "startGame()"} play
+  %button{:onclick => "openModal()"} instructions
+  #circle
+    click here when
+    %br>/
+    it turns red
+  %p#paragraph Your reaction time was:
+#modal
+  %h2 How to take the test:
+  %p
+    Click the "Play" button when you are ready
+    %br/
+    When the circle turns red, click on it
+    %br/
+    Your reaction time will now be displayed!
+  %h2 Good luck!
+  %button#exit{:onclick => "closeModal()"} X
