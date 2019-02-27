@@ -3,6 +3,10 @@
 //= require turbolinks
 //= require_tree .
 
+// global variables
+let currentDate
+let startTime
+
 const startGame = () => {
     // generate random time until game page goes red
     let secondsUntilRed = Math.floor((Math.random() * 7 + 2) * 1000)
@@ -16,6 +20,8 @@ const startGame = () => {
     }, secondsUntilRed);
 
     // start a timer when time is up
+    currentDate = new Date()
+    startTime = currentDate.getTime()
 
     // count the time from when the div turns red until user clicks on screen
 
