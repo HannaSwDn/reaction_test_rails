@@ -37,3 +37,13 @@ const startGame = () => {
         startTime = currentDate.getTime()
     }, secondsUntilRed);
 }
+
+const openModal = () => {
+    let modal = document.getElementById('modal')
+    modal.style.display = 'block'
+}
+
+const closeModal = () => {
+    let modal = document.getElementById('modal')
+    modal.style.display = 'none'
+}
